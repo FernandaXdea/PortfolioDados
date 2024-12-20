@@ -31,6 +31,8 @@ header nav ul {
     list-style: none;
     display: flex; /* Itens lado a lado */
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
@@ -41,10 +43,42 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 10px;
+    display: block; /* Certificando-se de que o link ocupa toda a área do item */
 }
 
 header nav ul li a:hover {
     color: #2c3e50;
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com fundo leve */
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: row; /* Certificando-se que os itens permanecem lado a lado */
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
 }
 
 /* Seções */
